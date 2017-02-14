@@ -1,0 +1,13 @@
+node_modules/
+IdealPOS_Data/
+database.sqlite
+release/
+build/
+dist/
+*.AppImage
+*.snap
+*.exe
+*.zip
+*.asar
+.DS_Store
+Thumbs.db
