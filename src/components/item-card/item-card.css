@@ -1,0 +1,153 @@
+.item-card {
+  background: #ffffff;
+  border: 1px solid #e1e8ed;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  min-height: 10rem;
+}
+.item-card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(9, 132, 227, 0.15);
+}
+
+.card-dead {
+  background-color: #f1f3f5;
+  border: 1px solid #dcdde1;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  opacity: 0.65;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 10rem;
+}
+
+.card-info {
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+.item-name {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  color: #2d3436;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.card-specs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+  margin-right: -0.25rem;
+}
+.spec-box {
+  display: inline-flex;
+  align-items: center;
+  background: #f4f7f6;
+  border: 1px solid #e1e5ea;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #2d3436;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.spec-lbl {
+  color: #636e72;
+  margin-right: 0.25rem;
+  font-weight: 700;
+}
+
+.card-sku {
+  font-size: 0.75rem;
+  color: #b2bec3;
+  font-family: monospace;
+}
+.card-foot {
+  border-top: 1px dashed #f1f2f6;
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+.card-tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.held-badge {
+  font-size: 0.75rem;
+  color: #9c7c20;
+  background: #fdfbf2;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #f2e8c4;
+}
+.right-tags {
+  display: flex;
+  margin-left: auto;
+}
+.cart-badge {
+  font-size: 0.75rem;
+  color: #0984e3;
+  background: #e6f2ff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #b3d7ff;
+  margin-right: 0.5rem;
+}
+.stock-badge {
+  font-size: 0.75rem;
+  color: #636e72;
+  background: #f8f9fa;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #eeeeee;
+}
+
+.price-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.sale-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  background-color: #e84393;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 0.25rem;
+  margin-right: auto;
+}
+.price-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.old-price {
+  text-decoration: line-through;
+  color: #a0aab2;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+.new-price {
+  font-weight: 800;
+  color: #0984e3;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.active-sale {
+  color: #00b894;
+}
