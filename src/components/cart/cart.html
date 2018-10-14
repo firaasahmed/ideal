@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="components/cart/cart.css" />
+<aside class="cart-panel">
+  <div class="tab-box">
+    <div id="tab-list" class="tab-list"></div>
+    <button id="add-tab" class="add-tab" title="Park & Start New Order">
+      +
+    </button>
+  </div>
+
+  <header class="cart-head">
+    <div class="phone-box">
+      <span class="phone-code">+91</span>
+      <input
+        type="text"
+        id="phone-input"
+        class="phone-input"
+        placeholder="Customer Mobile Number"
+      />
+    </div>
+    <button id="clear-cart" class="clear-cart">DELETE</button>
+  </header>
+
+  <div class="cart-body">
+    <ul id="cart-list" class="cart-list"></ul>
+  </div>
+
+  <div class="summary-box">
+    <div class="cart-sum">
+      <div class="sum-row" id="sub-total">
+        <span>Subtotal</span><span>₹ 0.00</span>
+      </div>
+      <div class="disc-row" id="disc-val">
+        <span>Discount</span><span>- ₹ 0.00</span>
+      </div>
+    </div>
+    <div class="total-row">
+      <span class="total-lbl">Total</span>
+      <span class="total-val" id="grand-total">₹ 0.00</span>
+    </div>
+  </div>
+
+  <div class="cart-foot">
+    <div class="pay-row">
+      <button id="cash-btn" class="cash-btn">Cash</button>
+      <button id="card-btn" class="card-btn">Card</button>
+    </div>
+  </div>
+</aside>
