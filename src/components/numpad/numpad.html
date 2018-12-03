@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="components/numpad/numpad.css" />
+<div class="pad-box">
+  <div class="input-row">
+    <div class="price-col">
+      <label class="pad-lbl">Unit Price (₹)</label>
+      <input type="text" id="price-input" class="input-on" value="" readonly />
+    </div>
+    <div class="disc-col">
+      <label class="pad-lbl">Cashier Disc %</label>
+      <input type="text" id="disc-input" class="input-off" value="" readonly />
+    </div>
+  </div>
+
+  <div class="pad-grid">
+    <button id="pad-reset" class="pad-reset" data-val="RESET">Reset</button>
+    <button id="pad-back" class="pad-back" data-val="BACK">&#9003;</button>
+    <button id="pad-custom" class="pad-custom">Custom Disc %</button>
+
+    <button class="pad-btn" data-val="7">7</button>
+    <button class="pad-btn" data-val="8">8</button>
+    <button class="pad-btn" data-val="9">9</button>
+    <button class="promo-btn" data-discount="5">-5%</button>
+
+    <button class="pad-btn" data-val="4">4</button>
+    <button class="pad-btn" data-val="5">5</button>
+    <button class="pad-btn" data-val="6">6</button>
+    <button class="promo-btn" data-discount="10">-10%</button>
+
+    <button class="pad-btn" data-val="1">1</button>
+    <button class="pad-btn" data-val="2">2</button>
+    <button class="pad-btn" data-val="3">3</button>
+    <button class="promo-btn" data-discount="25">-25%</button>
+
+    <button class="pad-btn" data-val="0">0</button>
+    <button class="pad-btn" data-val="00">00</button>
+    <button class="pad-btn" data-val=".">.</button>
+    <button class="promo-btn" data-discount="50">-50%</button>
+  </div>
+</div>
