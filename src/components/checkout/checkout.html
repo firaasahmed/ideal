@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="components/checkout/checkout.css" />
+
+<div id="cash-bg" style="display: none">
+  <div class="pay-modal">
+    <header class="pay-head">
+      <h3>Cash Payment</h3>
+      <button id="close-cash">&#x2715;</button>
+    </header>
+    <div class="pay-body">
+      <div class="pay-left">
+        <div class="due-box">
+          <span class="due-lbl">Total Due</span
+          ><span id="cash-due">₹ 0.00</span>
+        </div>
+        <div class="tender-box">
+          <label>Amount Tendered</label
+          ><input type="text" id="tender-input" placeholder="₹ 0.00" readonly />
+        </div>
+        <div id="quick-cash"></div>
+        <div id="chk-grid">
+          <button data-val="7">7</button><button data-val="8">8</button
+          ><button data-val="9">9</button
+          ><button id="chk-back" data-val="BACK">&#9003;</button>
+          <button data-val="4">4</button><button data-val="5">5</button
+          ><button data-val="6">6</button
+          ><button id="chk-clear" data-val="CLEAR">C</button>
+          <button data-val="1">1</button><button data-val="2">2</button
+          ><button data-val="3">3</button><button data-val="00">00</button>
+          <button id="chk-zero" data-val="0">0</button
+          ><button data-val=".">.</button>
+        </div>
+      </div>
+      <div class="pay-right">
+        <div class="change-box">
+          <span class="change-lbl">Change Due</span
+          ><span class="change-off" id="change-val">₹ 0.00</span>
+        </div>
+        <button id="finish-cash" disabled>Complete Sale</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="card-bg" style="display: none">
+  <div class="card-modal">
+    <header class="pay-head">
+      <h3>Card / UPI Payment</h3>
+      <button id="close-card">&#x2715;</button>
+    </header>
+    <div class="card-body">
+      <span class="due-lbl">Amount Due</span>
+      <span id="card-due">₹ 0.00</span>
+      
+      <div class="qr-box">
+        <div class="qr-icon" id="qr-container">&#x25A3;</div>
+        <span class="qr-lbl" id="qr-label">Scan Store QR Code</span>
+      </div>
+      
+      <div class="term-status" id="term-status">
+        Awaiting payment...
+      </div>
+      
+      <div class="card-btns" style="display: none;">
+        <button id="manual-decline">Cancel</button>
+        <button id="manual-confirm">Confirm Payment</button>
+      </div>
+
+    </div>
+  </div>
+</div>
