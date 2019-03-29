@@ -1,0 +1,56 @@
+<link
+  rel="stylesheet"
+  href="components/modal/manage-discounts/manage-discounts.css"
+/>
+
+<div class="campaign-overlay" id="discounts-modal" style="display: none">
+  <div class="campaign-box">
+    <header class="campaign-header">
+      <div class="campaign-header-info">
+        <h3 class="campaign-title">Discount Campaigns</h3>
+        <p class="campaign-subtitle">
+          Create and manage active store promotions.
+        </p>
+      </div>
+      <button class="campaign-close-btn close-disc">&times;</button>
+    </header>
+
+    <div class="campaign-body">
+      <div class="campaign-section">
+        <h4 class="campaign-section-label">Create New Campaign</h4>
+        <div class="campaign-form-row">
+          <input
+            type="text"
+            id="new-disc-name"
+            class="campaign-input"
+            style="flex: 2"
+            placeholder="Campaign Name"
+          />
+          <select
+            id="new-disc-type"
+            class="campaign-input"
+            style="flex: 1; cursor: pointer"
+          >
+            <option value="PERCENT">%</option>
+            <option value="FLAT">₹</option>
+          </select>
+          <input
+            type="number"
+            id="new-disc-val"
+            class="campaign-input"
+            style="flex: 1"
+            placeholder="Value"
+          />
+          <button class="campaign-btn-add" id="save-discount">Add</button>
+        </div>
+      </div>
+
+      <h4 class="campaign-section-label">Active Campaigns</h4>
+      <ul id="discount-list" class="campaign-list"></ul>
+    </div>
+
+    <footer class="campaign-footer">
+      <button class="campaign-btn-done close-disc">Close</button>
+    </footer>
+  </div>
+</div>

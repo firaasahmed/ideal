@@ -1,0 +1,125 @@
+<link
+  rel="stylesheet"
+  href="components/modal/receipt-modal/receipt-modal.css"
+/>
+
+<div class="modal-overlay" id="receipt-modal" style="display: none">
+  <div class="modal-card receipt-modal">
+    <header class="modal-head">
+      <h3>Order Receipt</h3>
+      <div class="header-actions">
+        <button class="action-btn print-btn" id="print-btn">
+          Print Receipt
+        </button>
+        <button class="close-btn" id="close-modal">&times;</button>
+      </div>
+    </header>
+
+    <div class="modal-body">
+      <div class="receipt-layout">
+        <div class="receipt-paper" id="print-area">
+          <div class="receipt-head">
+            <h2 id="store-name">IDEAL FOOTWEAR</h2>
+            <p id="address-one">45, Nagawara Main Rd, 3rd Cross Rd</p>
+            <p id="address-two">Near K.G Halli Police Station</p>
+            <p id="address-three">Kushal Nagar, Bengaluru, KA 560045</p>
+            <p id="store-phone">Phone: +91 96633 14427</p>
+            <p class="spacer-text" id="order-id">ORD-0000</p>
+            <p id="order-date">YYYY-MM-DD HH:MM</p>
+          </div>
+
+          <table class="receipt-table">
+            <thead>
+              <tr>
+                <th class="col-item">Item</th>
+                <th class="col-qty">Qty</th>
+                <th class="col-price">Price</th>
+              </tr>
+            </thead>
+            <tbody id="receipt-items"></tbody>
+          </table>
+
+          <div class="totals-section">
+            <div class="total-row">
+              <span>Subtotal</span><span id="subtotal-amt">₹ 0.00</span>
+            </div>
+            <div class="total-row">
+              <span>Discount</span><span id="discount-amt"> - ₹0.00</span>
+            </div>
+            <div class="total-row grand-row">
+              <span>Total</span><span id="grand-amt">₹ 0.00</span>
+            </div>
+          </div>
+
+          <div class="receipt-foot">
+            <p>Payment Method: <strong id="payment-type">CASH</strong></p>
+            <div class="policy-text" id="receipt-policy">
+              Returns accepted within 7 days from purchase date with original
+              receipt and intact packaging.<br /><br />
+              Thank you for shopping with us!
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="refund-history-card"
+          id="refund-history-card"
+          style="display: none"
+        >
+          <div class="refund-history-head">
+            <h4>Refund History</h4>
+          </div>
+          <div class="refund-history-body" id="refund-history-list"></div>
+          <div class="refund-history-foot">
+            <span>Total Refunded</span>
+            <span id="refund-history-total" class="refund-total-val"
+              >- ₹0.00</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="settings-modal" style="display: none">
+  <div class="modal-card">
+    <header class="modal-head">
+      <h3>Receipt Information</h3>
+      <button class="close-btn" id="close-settings">&times;</button>
+    </header>
+
+    <div class="settings-body">
+      <div class="input-group">
+        <label class="input-label">Store Name</label>
+        <input type="text" class="text-input" id="edit-store" />
+      </div>
+      <div class="input-group">
+        <label class="input-label">Address Line 1</label>
+        <input type="text" class="text-input" id="edit-add1" />
+      </div>
+      <div class="input-group">
+        <label class="input-label">Address Line 2</label>
+        <input type="text" class="text-input" id="edit-add2" />
+      </div>
+      <div class="input-group">
+        <label class="input-label">Address Line 3</label>
+        <input type="text" class="text-input" id="edit-add3" />
+      </div>
+      <div class="input-group">
+        <label class="input-label">Contact Info</label>
+        <input type="text" class="text-input" id="edit-phone" />
+      </div>
+      <div class="input-group" style="margin-bottom: 0">
+        <label class="input-label">Return Policy / Footer Note</label>
+        <textarea class="text-area" id="edit-policy" rows="4"></textarea>
+      </div>
+    </div>
+
+    <div class="modal-foot">
+      <button class="action-btn print-btn" id="save-settings">
+        Save Settings
+      </button>
+    </div>
+  </div>
+</div>

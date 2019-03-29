@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="components/modal/apply-sale/apply-sale.css" />
+
+<div class="modal-overlay" id="apply-sale-modal" style="display: none">
+  <div class="modal-box sale-box">
+    <header class="modal-head">
+      <h3>Put Products on Sale</h3>
+      <button class="close-btn close-apply">&times;</button>
+    </header>
+
+    <div class="modal-content">
+      <p class="sale-info">
+        Applying discount to <strong id="apply-count">0</strong> selected
+        products.
+      </p>
+
+      <label class="input-label">Select Campaign:</label>
+      <select id="apply-disc-select" class="input-box select-box"></select>
+
+      <button class="save-btn full-width" id="confirm-apply-sale">
+        Apply Discount
+      </button>
+    </div>
+  </div>
+</div>

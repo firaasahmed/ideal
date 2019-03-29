@@ -1,0 +1,423 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(45, 52, 54, 0.6);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.modal-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #e1e5ea;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.modal-card:not(.receipt-modal) {
+  width: 100%;
+  max-width: 32rem;
+}
+.modal-card.receipt-modal {
+  width: max-content !important;
+  max-width: 95vw !important;
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e1e5ea;
+  background-color: #ffffff;
+}
+.modal-head h3 {
+  font-size: 1.25rem;
+  color: #2d3436;
+  margin: 0;
+  font-weight: 800;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.close-btn {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #a0aab2;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  background: #f4f7f6;
+  border: 1px solid #e1e5ea;
+  border-radius: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.75rem;
+}
+.close-btn:hover {
+  background-color: #e1e5ea;
+  color: #2d3436;
+}
+
+.action-btn {
+  background-color: #ffffff;
+  border: 1px solid #e1e5ea;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #2d3436;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+}
+.print-btn {
+  background-color: #0984e3;
+  color: #ffffff;
+}
+.print-btn:hover {
+  background-color: #0c75c6;
+  color: #ffffff;
+}
+
+.modal-body {
+  overflow: auto;
+  padding: 2rem;
+  background-color: #f4f7f6;
+}
+.receipt-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.receipt-paper {
+  width: 22rem;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  border: 1px solid #e1e5ea;
+}
+
+.receipt-paper,
+.receipt-paper * {
+  color: #000000 !important;
+}
+
+.receipt-head {
+  text-align: center;
+  border-bottom: 1px dashed #000000;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.receipt-head h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+.receipt-head p {
+  margin: 0.25rem 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.spacer-text {
+  margin-top: 0.75rem !important;
+}
+
+.receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  table-layout: fixed;
+}
+.receipt-table th {
+  padding: 0.5rem 0.25rem;
+  border-bottom: 1px solid #000000;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: left;
+}
+.receipt-table td {
+  padding: 0.5rem 0.25rem;
+  border-bottom: 1px dashed #000000;
+  vertical-align: top;
+}
+
+.col-item {
+  width: 60%;
+  padding-right: 0.5rem;
+  text-align: left;
+}
+.col-qty {
+  width: 10%;
+  text-align: center;
+}
+.col-price {
+  width: 30%;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.item-name {
+  font-weight: 800;
+  display: block;
+  line-height: 1.25;
+  font-size: 0.75rem;
+  word-wrap: break-word;
+}
+.item-meta {
+  display: block;
+  font-size: 0.65rem;
+  margin-top: 0.15rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.item-discount {
+  font-size: 0.6rem;
+  font-weight: 600;
+  display: block;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+}
+
+.price-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.old-price {
+  text-decoration: line-through;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+.new-price {
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.totals-section {
+  border-bottom: 1px dashed #000000;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+.grand-row {
+  font-size: 1rem;
+  font-weight: 900;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #000000;
+  margin-bottom: 0;
+}
+
+.receipt-foot {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.5;
+}
+.policy-text {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #000000;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.refund-history-card {
+  width: 18rem;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid #e1e5ea;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  margin-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.refund-history-head {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e1e5ea;
+}
+.refund-history-head h4 {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #636e72;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.refund-history-body {
+  padding: 1rem;
+  max-height: 20rem;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+.refund-item-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dashed #e1e5ea;
+}
+.refund-item-row:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.ref-item-name {
+  font-weight: 800;
+  font-size: 0.75rem;
+  color: #2d3436;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.ref-item-qty {
+  font-size: 0.75rem;
+  color: #636e72;
+  font-weight: 700;
+}
+.refund-history-foot {
+  padding: 1rem;
+  border-top: 1px solid #e1e5ea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #2d3436;
+}
+.refund-total-val {
+  color: #636e72;
+}
+
+.settings-body {
+  background-color: #ffffff;
+  padding: 1.5rem;
+}
+.modal-foot {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #e1e5ea;
+  background-color: #f8f9fa;
+}
+.input-group {
+  margin-bottom: 1rem;
+}
+.input-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #636e72;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+.text-input,
+.text-area {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+  border: 1px solid #e1e5ea;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  color: #2d3436;
+  outline: none;
+  transition: border-color 0.2s;
+  font-weight: 700;
+}
+.text-area {
+  resize: vertical;
+  font-family: inherit;
+}
+.text-input:focus,
+.text-area:focus {
+  border-color: #0984e3;
+  background-color: #ffffff;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-area,
+  #print-area * {
+    visibility: visible;
+  }
+  #print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+  }
+  .modal-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    background: transparent;
+    display: block !important;
+  }
+  .modal-card.receipt-modal {
+    box-shadow: none !important;
+    border: none !important;
+    max-height: none !important;
+    width: auto !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+  }
+  .modal-head,
+  .close-btn,
+  .refund-history-card {
+    display: none !important;
+  }
+
+  @page {
+    size: 80mm auto;
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .receipt-paper {
+    width: 80mm;
+    padding: 5mm;
+  }
+}
+
