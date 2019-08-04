@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="components/inventory-table/inventory-table.css" />
+
+<div class="inv-main-header">
+  <div class="quick-filters-group">
+    <button class="outline-btn quick-filter-btn active-filter">All</button>
+    <button class="outline-btn quick-filter-btn">On Sale</button>
+    <button class="outline-btn quick-filter-btn">Out of Stock</button>
+  </div>
+  <div class="export-actions">
+    <div class="results-count" id="total-results-text">Showing 0 results</div>
+    <div class="header-divider"></div>
+    <button
+      class="outline-btn bulk-action-btn"
+      id="inline-edit-btn"
+      title="Edit attributes & pricing"
+    >
+      Edit Table
+    </button>
+    <button
+      class="outline-btn bulk-action-btn"
+      id="export-csv-btn"
+      title="Export to Excel"
+    >
+      Export CSV
+    </button>
+    <button class="outline-btn bulk-action-btn" id="toggle-view-btn">
+      Separate Variants
+    </button>
+  </div>
+</div>
+
+<div class="inv-table-wrapper">
+  <table class="inv-table">
+    <thead>
+      <tr>
+        <th style="width: 2rem">
+          <input type="checkbox" id="select-all-checkbox" />
+        </th>
+        <th>Product Name</th>
+        <th>Brand</th>
+        <th id="variant-header-text">Variants</th>
+        <th id="th-mrp" style="text-align: right">MRP</th>
+        <th id="th-sp" style="text-align: right">Selling Price</th>
+        <th style="text-align: right">Stock</th>
+        <th style="text-align: right">Action</th>
+      </tr>
+    </thead>
+    <tbody id="inventory-tbody"></tbody>
+  </table>
+</div>
+
+<div id="page-foot" class="pagination-bar"></div>
