@@ -1,0 +1,96 @@
+<link
+  rel="stylesheet"
+  href="components/inventory-sidebar/inventory-sidebar.css"
+/>
+
+<aside class="inv-sidebar-container">
+  <div class="sidebar-card filters-card">
+    <header class="sidebar-header">
+      <h2>Inventory</h2>
+      <span class="sync-status">Synced to Database</span>
+    </header>
+    <div class="sidebar-scroll-area">
+      <div class="sidebar-section">
+        <label class="sidebar-label">Search</label>
+        <div class="inv-search-group">
+          <input
+            type="text"
+            class="inv-search-bar"
+            placeholder="SKU, Name, Size..."
+          />
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <label class="sidebar-label">Category</label>
+        <select class="inv-filter-dropdown" id="filter-category">
+          <option>All Categories</option>
+        </select>
+      </div>
+      <div class="sidebar-section">
+        <label class="sidebar-label">Brand</label>
+        <select class="inv-filter-dropdown" id="filter-brand">
+          <option>All Brands</option>
+        </select>
+      </div>
+      <div class="sidebar-section">
+        <label class="sidebar-label">Gender</label>
+        <select class="inv-filter-dropdown" id="filter-gender">
+          <option value="All Genders">All Genders</option>
+          <option value="Men">Men</option>
+          <option value="Women">Women</option>
+          <option value="Unisex">Unisex</option>
+          <option value="Kids">Kids</option>
+          <option value="N/A">N/A (Accessories)</option>
+        </select>
+      </div>
+
+      <div
+        class="sidebar-section"
+        style="
+          margin-top: 2rem;
+          border-top: 1px dashed #e1e5ea;
+          padding-top: 1rem;
+        "
+      >
+        <label class="sidebar-label">Database Backup</label>
+        <div style="font-size: 0.75rem; color: #636e72; margin-bottom: 0.75rem">
+          Last:
+          <span id="last-backup-time" style="font-weight: 800; color: #2d3436"
+            >Never</span
+          >
+        </div>
+        <button
+          id="sidebar-run-backup-btn"
+          style="
+            width: 100%;
+            padding: 0.6rem;
+            background-color: #f4f7f6;
+            border: 1px solid #e1e5ea;
+            border-radius: 0.5rem;
+            color: #2d3436;
+            font-size: 0.75rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.2s;
+          "
+        >
+          Run Backup Now
+        </button>
+      </div>
+
+      <button id="sidebar-import-csv-btn" style="width: 100%;
+            padding: 0.6rem;
+            background-color: #f4f7f6;
+            border: 1px solid #e1e5ea;
+            border-radius: 0.5rem;
+            color: #2d3436;
+            font-size: 0.75rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.2s;">
+        Import Products (CSV)
+      </button>
+      <input type="file" id="csv-file-input" accept=".csv" style="display: none;">
+    </div>
+  </div>
+</aside>
