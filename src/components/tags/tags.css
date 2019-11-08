@@ -1,0 +1,69 @@
+.promo-tag,
+.cash-tag,
+.sale-tag,
+.stock-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid transparent;
+  margin-right: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.promo-tag,
+.cash-tag {
+  background-color: #f4f7f6;
+  color: #636e72;
+  border-color: #e1e5ea;
+}
+.sale-tag {
+  background-color: #fff1f2;
+  color: #e11d48;
+  border-color: #ffe4e6;
+}
+.stock-tag {
+  background-color: #eff6ff;
+  color: #2563eb;
+  border-color: #bfdbfe;
+}
+
+.tag-saved {
+  margin-left: 0.5rem;
+  color: #059669;
+  font-weight: bold;
+  font-size: 0.75rem;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.tag-del {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  color: #c53030;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 0.25rem;
+}
+
+.strike-text {
+  text-decoration: line-through;
+  color: #a0aab2;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+.green-text {
+  color: #059669;
+  font-weight: bold;
+}
+.col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+}

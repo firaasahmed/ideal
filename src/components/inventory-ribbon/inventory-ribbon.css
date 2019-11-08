@@ -1,0 +1,78 @@
+.inv-ribbon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  border: 1px solid #e1e5ea;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+.ribbon-left,
+.ribbon-right {
+  display: flex;
+  align-items: center;
+}
+.ribbon-left .ribbon-group {
+  margin-right: 1rem;
+}
+.ribbon-left .ribbon-group:last-child {
+  margin-right: 0;
+}
+.ribbon-right .ribbon-group {
+  margin-left: 1rem;
+}
+.ribbon-group {
+  display: flex;
+  align-items: center;
+}
+.ribbon-group .ribbon-text-btn {
+  margin-right: 0.5rem;
+}
+.ribbon-group .ribbon-text-btn:last-child {
+  margin-right: 0;
+}
+.ribbon-divider {
+  width: 2px;
+  height: 1.5rem;
+  background-color: #d1d8df;
+  border-radius: 1px;
+  margin: 0 0.5rem;
+}
+.ribbon-text-btn {
+  background: #ffffff;
+  border: 1px solid #e1e5ea;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #636e72;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.ribbon-text-btn:hover {
+  background-color: #e1e5ea;
+  color: #2d3436;
+}
+.ribbon-text-btn.primary-action {
+  color: #0984e3;
+  border-color: #b3d7ff;
+}
+.ribbon-text-btn.primary-action:hover {
+  background-color: #e6f2ff;
+  color: #076bba;
+}
+.ribbon-text-btn.campaign-action {
+  color: #00b894;
+  border-color: #99e9d2;
+}
+.ribbon-text-btn.campaign-action:hover {
+  background-color: #e6fcf5;
+  color: #009688;
+}
+.ribbon-text-btn.danger-action:hover {
+  color: #e81123;
+  background-color: #ffebee;
+  border-color: #ffcdd2;
+}
