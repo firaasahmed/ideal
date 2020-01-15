@@ -1,0 +1,112 @@
+<link rel="stylesheet" href="components/modal/add-product/add-product.css" />
+
+<div class="ap-modal-overlay" id="product-modal" style="display: none">
+  <div class="ap-modal-box" id="add-product-box">
+    <header class="ap-modal-header">
+      <div>
+        <h2 class="ap-title">Create Product</h2>
+        <p class="ap-subtitle">Set up the catalog profile and base pricing.</p>
+      </div>
+      <button class="ap-icon-btn" id="close-btn">&times;</button>
+    </header>
+
+    <div class="ap-modal-body">
+      <div class="ap-card">
+        <div class="ap-row">
+          <div class="ap-col">
+            <div class="ap-field">
+              <label>Brand</label>
+              <input
+                type="text"
+                id="brand-input"
+                list="brand-datalist"
+                class="ap-input"
+                placeholder="e.g. Nike"
+              />
+              <datalist id="brand-datalist"></datalist>
+            </div>
+          </div>
+          <div class="ap-col">
+            <div class="ap-field">
+              <label>Category</label>
+              <select
+                id="category-input"
+                class="ap-input"
+                style="cursor: pointer"
+              >
+                <option value="Footwear">Footwear</option>
+                <option value="Apparel">Apparel</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="ap-row" style="margin-top: 1rem; margin-bottom: 0">
+          <div class="ap-col" style="width: 100%">
+            <div class="ap-field">
+              <label>Product Name</label>
+              <input
+                type="text"
+                id="name-input"
+                class="ap-input"
+                placeholder="e.g. Air Max 90"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ap-card" style="margin-bottom: 0">
+        <h3 class="ap-card-title">Default Pricing</h3>
+        <div class="ap-row" style="margin-bottom: 0">
+          <div class="ap-col">
+            <div class="ap-field">
+              <label>Base MRP (₹)</label>
+              <input
+                type="number"
+                id="mrp-input"
+                class="ap-input"
+                placeholder="0.00"
+              />
+            </div>
+          </div>
+          <div class="ap-col">
+            <div class="ap-field">
+              <label>Selling Price (₹)</label>
+              <input
+                type="number"
+                id="sp-input"
+                class="ap-input"
+                placeholder="0.00"
+              />
+            </div>
+          </div>
+          <div class="ap-col">
+            <div class="ap-field">
+              <label>GST %</label>
+              <input
+                type="number"
+                id="gst-input"
+                class="ap-input"
+                placeholder="18"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="ap-modal-footer">
+      <input type="hidden" id="hidden-sku" />
+      <button
+        class="ap-btn ap-btn-secondary"
+        id="cancel-btn"
+        style="margin-right: 0.75rem"
+      >
+        Cancel
+      </button>
+      <button class="ap-btn ap-btn-primary" id="save-product">Next</button>
+    </footer>
+  </div>
+</div>
