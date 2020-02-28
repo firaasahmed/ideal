@@ -1,0 +1,245 @@
+#edit-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  overflow-y: auto;
+  z-index: 10;
+  padding-bottom: 0;
+}
+
+.edit-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 0.75rem;
+  border-bottom: 0.25rem solid #e1e5ea;
+}
+.edit-head h3 {
+  font-size: 1.25rem;
+  color: #2d3436;
+  margin: 0;
+  font-weight: 800;
+}
+#close-modal {
+  padding: 0.25rem;
+  background: rgb(245, 245, 245);
+  border: none;
+  font-size: 1.25rem;
+  color: #a0aab2;
+  cursor: pointer;
+  transition: color 0.25s;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+#close-modal:hover {
+  background-color: #e81123;
+  color: #ffffff;
+}
+
+.edit-body {
+  display: flex;
+  flex-grow: 1;
+}
+
+.edit-numpad {
+  flex: 1.25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+#numpad-box {
+  width: 90%;
+}
+
+.edit-actions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 2.5rem;
+  border-left: 0.25rem solid #e1e5ea;
+}
+
+.edit-summary {
+  background-color: #f2f2f2;
+  border: 0.25rem solid #e1e5ea;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#edit-details {
+  width: 100%;
+  pointer-events: none;
+  border-bottom: 0.25rem dashed #d1d8df;
+  background-color: #ffffff;
+  padding: 0.25rem;
+  box-sizing: border-box;
+}
+
+.edit-brand {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #0984e3;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+.edit-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #2d3436;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.edit-specs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+  margin-right: -0.75rem;
+  margin-bottom: -0.75rem;
+}
+.edit-spec-box {
+  display: flex;
+  align-items: center;
+  margin-right: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.edit-spec-lbl {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #636e72;
+  margin-right: 0.5rem;
+}
+.edit-spec-val {
+  background: #e1e5ea;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #2d3436;
+  text-transform: uppercase;
+}
+
+.edit-pricing {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.edit-qty {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  min-height: 2rem;
+}
+.edit-qty-val {
+  font-size: 1rem;
+  color: #2d3436;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.edit-break {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.edit-old {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+.edit-old-lbl {
+  font-size: 1rem;
+  color: #636e72;
+  font-weight: 700;
+}
+.edit-old-val {
+  color: #636e72;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: line-through;
+}
+
+.edit-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 0.25rem solid #d1d8df;
+}
+.edit-sum-lbl {
+  color: #2d3436;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+.edit-sum-val {
+  color: #0984e3;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.edit-apply {
+  width: 100%;
+  min-height: 3.5rem;
+  background-color: #2d3436;
+  border: none;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  touch-action: manipulation;
+  margin-bottom: 0.75rem;
+  transition: background-color 0.25s;
+}
+.edit-apply:hover {
+  background-color: #1e2425;
+}
+.edit-apply:active {
+  transform: scale(0.98);
+}
+
+.edit-remove {
+  width: 100%;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 0.25rem solid #ffcdd2;
+  border-radius: 0.5rem;
+  color: #d32f2f;
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.edit-remove:hover {
+  background-color: #ffebee;
+}
+
+.edit-kill {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  color: #e81123;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 0.25rem;
+}

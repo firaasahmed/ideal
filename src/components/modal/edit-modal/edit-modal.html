@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="components/modal/edit-modal/edit-modal.css" />
+<div id="edit-overlay" style="display: none">
+  <header class="edit-head">
+    <h3>Edit Item</h3>
+    <button id="close-modal">&#x2715;</button>
+  </header>
+  <div class="edit-body">
+    <div class="edit-numpad">
+      <div id="numpad-box"></div>
+    </div>
+
+    <div class="edit-actions">
+      <div class="edit-summary">
+        <div id="edit-details"></div>
+
+        <div class="edit-pricing">
+          <div class="edit-qty">
+            <span id="edit-qty-val" class="edit-qty-val">Quantity: 1</span>
+          </div>
+
+          <div id="edit-break" class="edit-break"></div>
+
+          <div class="edit-old" id="edit-old" style="display: none">
+            <span class="edit-old-lbl">Original Price:</span>
+            <span id="edit-old-val" class="edit-old-val">₹ 0.00</span>
+          </div>
+
+          <div class="edit-total">
+            <span class="edit-sum-lbl">Total:</span>
+            <span id="edit-sum-val" class="edit-sum-val">₹ 0.00</span>
+          </div>
+        </div>
+      </div>
+
+      <button id="edit-apply" class="edit-apply">Apply Changes</button>
+      <button class="edit-remove">Remove Item</button>
+    </div>
+  </div>
+</div>
