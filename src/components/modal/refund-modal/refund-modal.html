@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="components/modal/refund-modal/refund-modal.css" />
+
+<div class="modal-overlay" id="refund-modal" style="display: none">
+  <div class="modal-card">
+    <header class="modal-head">
+      <h3>Process Refund</h3>
+      <button class="close-btn" id="close-refund">&times;</button>
+    </header>
+
+    <div class="refund-body">
+      <div class="refund-info">
+        <span class="info-label">Order ID:</span>
+        <span id="ref-order-num" class="info-value"></span>
+      </div>
+
+      <table class="refund-table">
+        <thead>
+          <tr>
+            <th class="col-name">Item Name</th>
+            <th class="col-price" style="text-align: right">Price</th>
+            <th class="col-action" style="text-align: right">Return Qty</th>
+          </tr>
+        </thead>
+        <tbody id="refund-items"></tbody>
+      </table>
+    </div>
+
+    <footer class="refund-foot">
+      <div class="calc-box">
+        <span class="calc-lbl">Refund Amount:</span>
+        <span class="calc-val" id="refund-total">₹0.00</span>
+      </div>
+      <div class="refund-actions">
+        <button
+          class="issue-btn"
+          id="refund-discard-btn"
+          title="Process refund but DO NOT add items back to inventory"
+        >
+          Refund & Discard
+        </button>
+        <button
+          class="restock-btn"
+          id="refund-restock-btn"
+          title="Process refund and add items back to inventory"
+        >
+          Refund & Restock
+        </button>
+      </div>
+    </footer>
+  </div>
+</div>

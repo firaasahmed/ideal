@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="frames/recent-orders/recent-orders.css" />
+
+<div class="page-layout">
+  <aside class="left-sidebar">
+    <div class="sidebar-card filter-card">
+      <header class="sidebar-head">
+        <h2>Sales History</h2>
+        <span class="sync-label">All transactions</span>
+      </header>
+      <div class="scroll-area">
+        <div class="filter-section">
+          <label class="filter-label">Search Order</label>
+          <div class="search-box">
+            <input
+              type="text"
+              class="search-input"
+              id="search-orders"
+              placeholder="e.g. ORD-0001..."
+            />
+          </div>
+        </div>
+        <div class="filter-section">
+          <label class="filter-label">Payment Method</label>
+          <select class="dropdown-input" id="filter-payment">
+            <option value="ALL">All Methods</option>
+            <option value="CASH">Cash</option>
+            <option value="CARD/UPI">Card / UPI</option>
+          </select>
+        </div>
+        <div class="filter-section">
+          <label class="filter-label">Order Status</label>
+          <select class="dropdown-input" id="filter-status">
+            <option value="ALL">All Statuses</option>
+            <option value="PAID">Paid (No Refunds)</option>
+            <option value="PARTIAL REFUND">Partial Refund</option>
+            <option value="REFUNDED">Fully Refunded</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <section class="main-content">
+    <div class="top-bar">
+      <div class="result-text" id="orders-count">Showing 0 orders</div>
+      <div class="action-group">
+        <button class="action-btn danger-btn" id="delete-order-btn">
+          Delete Order
+        </button>
+        <button class="action-btn" id="export-csv">Export Sales</button>
+        <button class="action-btn settings-btn" id="open-settings">
+          Receipt Settings
+        </button>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width: 2rem"></th>
+            <th style="width: 2rem">
+              <input type="checkbox" id="select-all" />
+            </th>
+            <th>Order Number</th>
+            <th>Date & Time</th>
+            <th>Customer Phone</th>
+            <th style="text-align: center">Payment</th>
+            <th style="text-align: right">Grand Total</th>
+            <th style="text-align: center">Status</th>
+            <th style="text-align: right">Action</th>
+          </tr>
+        </thead>
+        <tbody id="orders-tbody"></tbody>
+      </table>
+    </div>
+    <div class="pagination-bar" id="page-foot"></div>
+  </section>
+</div>
+
+<div id="receipt-modal-container"></div>
+<div id="refund-modal-container"></div>
