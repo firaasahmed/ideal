@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="frames/supplier/supplier.css" />
+
+<div class="page-layout">
+  <aside class="left-sidebar">
+    <div class="sidebar-card filter-card">
+      <header class="sidebar-head">
+        <h2>Stock Ledger</h2>
+        <span class="sync-label">Inventory History</span>
+      </header>
+      <div class="scroll-area">
+        <div class="filter-section">
+          <label class="filter-label">Search Item or SKU</label>
+          <div class="search-box">
+            <input
+              type="text"
+              class="search-input"
+              id="search-ledger"
+              placeholder="e.g. NIK-AM9..."
+            />
+          </div>
+        </div>
+        <div class="filter-section">
+          <label class="filter-label">Filter Supplier</label>
+          <select class="dropdown-input" id="filter-supplier">
+            <option value="ALL">All Suppliers</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <section class="main-content">
+    <div class="top-bar">
+      <div class="result-text" id="ledger-count">Showing 0 items</div>
+      <div class="action-group">
+        <button
+          class="action-btn danger-btn"
+          id="open-batch-return"
+          style="color: #d63031; font-weight: bold; border-color: #ffcdd2"
+        >
+          Return by Date
+        </button>
+        <button class="action-btn" id="export-ledger-csv">
+          Export Ledger to CSV
+        </button>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width: 2rem"></th>
+            <th>Item Name</th>
+            <th>Variant</th>
+            <th>SKU</th>
+            <th style="text-align: center">Current Stock</th>
+            <th style="text-align: right">Last Supplier Price</th>
+          </tr>
+        </thead>
+        <tbody id="ledger-tbody"></tbody>
+      </table>
+    </div>
+    <div class="pagination-bar" id="page-foot"></div>
+  </section>
+</div>
+
+<div id="supplier-table-container"></div>

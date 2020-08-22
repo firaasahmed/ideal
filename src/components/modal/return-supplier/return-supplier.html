@@ -1,0 +1,57 @@
+<link
+  rel="stylesheet"
+  href="components/modal/return-supplier/return-supplier.css"
+/>
+
+<div class="rt-modal-overlay" id="supplier-table-modal" style="display: none">
+  <div class="rt-modal-box">
+    <header class="rt-modal-head">
+      <div class="rt-head-info">
+        <h3 class="rt-title">Return by Delivery Date</h3>
+        <p class="rt-subtitle">
+          Select a specific delivery to process items for return.
+        </p>
+      </div>
+      <button class="rt-close-btn close-supplier-table">&times;</button>
+    </header>
+
+    <div class="rt-modal-content">
+      <div class="rt-filter-section">
+        <label class="rt-label">Select Delivery Date</label>
+        <select id="return-date-select" class="rt-select">
+          <option value="">-- Choose a Date --</option>
+        </select>
+      </div>
+
+      <div id="st-table-wrapper" style="display: none">
+        <div class="rt-table-container">
+          <table class="rt-table">
+            <thead>
+              <tr>
+                <th>Item & Variant</th>
+                <th>Supplier</th>
+                <th>Cost (₹)</th>
+                <th style="text-align: center">Received</th>
+                <th style="text-align: right">Return Qty</th>
+              </tr>
+            </thead>
+            <tbody id="return-items-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="st-empty-msg" class="rt-empty-state">
+        Please select a date to preview received items.
+      </div>
+    </div>
+
+    <footer class="rt-modal-foot">
+      <button class="rt-btn rt-btn-secondary close-supplier-table">
+        Cancel
+      </button>
+      <button class="rt-btn rt-btn-primary" id="confirm-batch-return">
+        Process Returns
+      </button>
+    </footer>
+  </div>
+</div>
