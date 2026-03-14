@@ -13,7 +13,7 @@ this project started with a store having issues with its  legacy pos system , ha
 
 
 ## Functioning
-* **Checkout System:** Has a working cart, a custom numpad as per client request, and handles  discounts.
+* **Checkout System:** Has a  cart with parked orders system, a custom numpad as per client request, and handles  discounts.
 * **Inventory Management:** A section to add products, track stock levels, and another page to manage suppliers and return shipments.
 * **Offline Database:** Uses SQLite, so all the store data is saved directly on the local machine , thinking of adding a cloud upload feature too.
 
